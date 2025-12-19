@@ -569,8 +569,8 @@
                         cornerRadius: 8,
                         callbacks: {
                             label: function(context) {
-                                const pct = ((context.raw / total) * 100).toFixed(1);
-                                return `${context.raw} attendees (${pct}%)`;
+                                const pct = ((context.raw / total) * 100).toFixed(0);
+                                return `${pct}%`;
                             }
                         }
                     }
@@ -630,18 +630,18 @@
                     tooltip: {
                         backgroundColor: 'rgba(0,0,0,0.9)',
                         titleFont: {
-                            family: 'Space Mono',
+                            family: 'Courier New',
                             size: 12
                         },
                         bodyFont: {
-                            family: 'Instrument Sans',
+                            family: 'Georgia, Times New Roman, serif',
                             size: 14
                         },
                         padding: 12,
                         cornerRadius: 8,
                         callbacks: {
                             label: function(context) {
-                                const pct = ((context.raw / total2) * 100).toFixed(1);
+                                const pct = ((context.raw / total2) * 100).toFixed(0);
                                 return `${pct}%`;
                             }
                         }
